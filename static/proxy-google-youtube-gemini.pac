@@ -24,7 +24,11 @@ function FindProxyForURL(url, host) {
         "youtube.com", "googlevideo.com", "ytimg.com", "youtu.be",
         // Google & Gemini
         "google.com", "gstatic.com", "googleusercontent.com", "ai.googleusercontent.com",
-        "googleapis.com", "gemini.google.com"
+        "googleapis.com", "gemini.google.com",
+        // OpenAI ChatGPT
+        "chat.openai.com", "api.openai.com", "cdn.openai.com", "chatgpt.com", "openai.com",
+        // GitHub
+        "github.com", "githubusercontent.com", "githubassets.com", "github.githubassets.com"
     ];
 
     // Match exact domain or any subdomain
