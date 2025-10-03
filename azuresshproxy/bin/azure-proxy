@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PORT=${PORT:-8080}
+SSH_TARGET=${SSH_TARGET:-sf}
+SSH_BIN=${SSH_BIN:-/usr/bin/ssh}
+SSH_OPTS=${SSH_OPTS:-}
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+exec "${SSH_BIN}" ${SSH_OPTS} -C2qTnN -g -D "${PORT}" "${SSH_TARGET}"

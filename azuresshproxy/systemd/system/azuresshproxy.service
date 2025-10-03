@@ -1,0 +1,18 @@
+[Unit]
+Description=Azure SSH SOCKS5 Proxy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bartuer
+Environment=HOME=/home/bartuer
+WorkingDirectory=/home/bartuer
+ExecStart=/bin/azure-proxy
+Restart=on-failure
+RestartSec=5
+Environment=PORT=8080
+Environment=SSH_TARGET=sf
+
+[Install]
+WantedBy=multi-user.target
