@@ -153,11 +153,14 @@ else
 fi
 
 # Apply systemd changes and start services
+# Ensure services are enabled and pick up any unit changes
 systemctl daemon-reload
 
 services=(openresty privoxy azuresshproxy)
 for svc in "${services[@]}"; do
-	systemctl enable "${svc}" >/dev/null 2>&1 || true
+	if ! systemctl enable --now "${svc}" >/dev/null 2>&1; then
+		echo "warning: failed to enable ${svc}" >&2
+	fi
 	if ! systemctl restart "${svc}"; then
 		echo "error: failed to restart ${svc}" >&2
 		systemctl --no-pager --lines=20 status "${svc}" >&2 || true
