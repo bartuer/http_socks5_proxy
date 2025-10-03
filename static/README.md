@@ -9,7 +9,7 @@
 
 ## PAC file must be served via HTTP, not file://
 - Windows proxy settings often ignore or fail to load PAC files from file:// URLs due to permissions, service context, or caching issues.
-- Solution: Serve the PAC file via a local web server [http://play.local/proxy-google-youtube-gemini.pac(http://play.local/proxy-google-youtube-gemini.pac)].
+- Solution: Serve the PAC file via a local web server [http://play.local/proxy-google-youtube-gemini.pac](http://play.local/proxy-google-youtube-gemini.pac).
 
 ### Windows proxy configuration walkthrough
 

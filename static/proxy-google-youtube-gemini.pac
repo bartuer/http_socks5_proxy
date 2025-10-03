@@ -15,9 +15,11 @@ function FindProxyForURL(url, host) {
     }
 
     // Only these domains go through the proxy
-    var proxy = "PROXY 172.22.173.132:8081"; // Update if your WSL IP changes
+    var proxy = "PROXY play.local:8081"; // Update if your WSL IP changes
 
     var domains = [
+        // Privoxy diagnostics
+        "p.p", "config.privoxy.org",
         // YouTube
         "youtube.com", "googlevideo.com", "ytimg.com", "youtu.be",
         // Google & Gemini

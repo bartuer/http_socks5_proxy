@@ -7,7 +7,7 @@
 
 ## PAC 文件必须通过 HTTP 提供，不能使用 file://
 - Windows 的代理设置经常会忽略或者无法加载来自 `file://` 的 PAC 文件，原因可能是权限、服务上下文或缓存等限制。
-- 解决方法：在 WSL 中通过本地 Web 服务器提供 PAC 文件  [http://play.local/proxy-google-youtube-gemini.pac(http://play.local/proxy-google-youtube-gemini.pac)]。
+- 解决方法：在 WSL 中通过本地 Web 服务器提供 PAC 文件  [http://play.local/proxy-google-youtube-gemini.pac](http://play.local/proxy-google-youtube-gemini.pac)。
 
 ### Windows 代理配置步骤
 
