@@ -83,7 +83,7 @@ sudo ./config.sh
 
 When `config.sh` finishes successfully, Windows is forwarding traffic into WSL, the services are running, and the configuration files are deployed to their expected locations.
 
-## 4. Access (http://play.local)[http://play.local] to finish Proxy Configure
+## 4. Access [http://play.local](http://play.local) to finish Proxy Configure
 Follow instructions on README.md
 
 ## 5. Ongoing maintenance
