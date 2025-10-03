@@ -50,10 +50,6 @@ ps -ax|grep privoxy
 ```
 - You should see Privoxy listening on 8081 and ssh/azure-proxy on 8080.
 
-## Future improvements
-- Add health checks for both proxy ports (8080, 8081) to nginx for monitoring.
-- Privoxy already runs as a daemon; wrap the `ssh -D` SOCKS5 process as a daemon for reliability (e.g., systemd service or supervisor script).
-
 ## Service supervision and health checks
 
 - A systemd unit named `azuresshproxy.service` keeps the SOCKS5 tunnel (`/bin/azure-proxy`) alive. Enable it with:

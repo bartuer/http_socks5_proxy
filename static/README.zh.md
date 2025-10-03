@@ -46,9 +46,6 @@ ps -ax|grep privoxy
 ```
 - 你应当能看到 Privoxy 监听 8081，ssh/azure-proxy 监听 8080。
 
-## 后续可改进项
-- 为 nginx 增加针对 8080 和 8081 的健康检查，便于监控。
-- Privoxy 已经是守护进程；可以把 `ssh -D` 的 SOCKS5 隧道包装成守护进程（例如 systemd 服务或监督脚本），提升可靠性。
 
 ## 服务监管与健康检查
 
